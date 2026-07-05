@@ -1,0 +1,60 @@
+{
+  "news": [
+    {
+      "id": "n1",
+      "title": "City edge title race after dramatic late winner",
+      "excerpt": "A late strike delivered the result that shifted the momentum.",
+      "category": "Breaking",
+      "featured": true,
+      "author": "A. Singh",
+      "createdAt": "2026-07-05T08:00:00.000Z"
+    }
+  ],
+  "fixtures": [
+    {
+      "id": "f1",
+      "home": "Arsenal",
+      "away": "Chelsea",
+      "competition": "Premier League",
+      "kickoff": "2026-07-06T19:00:00.000Z",
+      "status": "Scheduled",
+      "createdAt": "2026-07-05T07:00:00.000Z"
+    }
+  ],
+  "teams": [
+    {
+      "id": "t1",
+      "name": "Arsenal",
+      "league": "Premier League",
+      "form": "W-W-D",
+      "coach": "Mikel Arteta"
+    }
+  ],
+  "players": [
+    {
+      "id": "p1",
+      "name": "Vinícius Júnior",
+      "club": "Real Madrid",
+      "position": "Winger",
+      "stat": "14 goals"
+    }
+  ],
+  "standings": [
+    {
+      "id": "s1",
+      "team": "Arsenal",
+      "played": 34,
+      "pts": 54
+    }
+  ],
+  "predictions": [
+    {
+      "id": "pr1",
+      "match": "Arsenal vs Chelsea",
+      "prediction": "Arsenal 2-1 Chelsea",
+      "confidence": "94%",
+      "createdAt": "2026-07-05T07:30:00.000Z"
+    }
+  ],
+  "updatedAt": "2026-07-05T08:00:00.000Z"
+}

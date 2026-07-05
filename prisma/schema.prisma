@@ -1,0 +1,79 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String      @id @default(cuid())
+  email        String      @unique
+  name         String?
+  passwordHash String
+  role         String      @default("USER")
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+  bookmarks    Bookmark[]
+  news         News[]
+}
+
+model News {
+  id          String   @id @default(cuid())
+  title       String
+  excerpt     String
+  category    String
+  featured    Boolean  @default(false)
+  author      String
+  content     String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  authorId    String?
+  authorUser  User?    @relation(fields: [authorId], references: [id])
+  bookmarks   Bookmark[]
+}
+
+model Fixture {
+  id           String   @id @default(cuid())
+  home         String
+  away         String
+  competition  String
+  kickoff      String
+  status       String   @default("Scheduled")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Team {
+  id           String   @id @default(cuid())
+  name         String
+  league       String
+  form         String
+  coach        String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Player {
+  id           String   @id @default(cuid())
+  name         String
+  club         String
+  position     String
+  stat         String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Bookmark {
+  id           String   @id @default(cuid())
+  userId       String
+  targetType   String
+  targetId     String
+  label        String
+  createdAt    DateTime @default(now())
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  news         News?    @relation(fields: [targetId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, targetType, targetId])
+}
