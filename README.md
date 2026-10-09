@@ -1,6 +1,6 @@
 # FootKit Demo
 
-A premium football website built with Next.js 15, React 19, TypeScript, Tailwind CSS, Framer Motion, and a lightweight file-backed backend layer.
+A premium football website built with Next.js 15, React 19, TypeScript, Tailwind CSS, Framer Motion, and a lightweight file-backed backend layers.
 
 ## Features
 
