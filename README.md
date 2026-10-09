@@ -8,7 +8,7 @@ A premium football website built with Next.js 15, React 19, TypeScript, Tailwind
 - News, fixtures, live, tables, transfers, statistics, players, and community pages
 - File-backed API routes for health, news, fixtures, teams, and predictions
 - Admin dashboard route powered by the shared store
-- Responsive dark football-themed UI with glassmorphism and motion
+- Responsive dark football-themed UI with glassmorphism and motions
 
 ## Development
 
