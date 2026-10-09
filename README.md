@@ -17,7 +17,7 @@ npm install
 npm run dev
 ```
 
-## Admin API usage
+## Admin API usages
 
 Set an admin header when posting to protected routes:
 
